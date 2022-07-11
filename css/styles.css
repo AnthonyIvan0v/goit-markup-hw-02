@@ -34,6 +34,7 @@ body {
 .link{
     text-decoration: none;
 }
+
 .list{
     list-style: none;
 }
@@ -72,6 +73,10 @@ body {
 .site-nav:focus{
    color:var(--accent-color)
 }
+.header .current {
+        color: var(--accent-color);
+    }
+
 /*====/site-nav==== */
 
 /*====contacts====*/
