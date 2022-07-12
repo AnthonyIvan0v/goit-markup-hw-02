@@ -165,7 +165,7 @@ background-color: var(--background-hero-button-hover-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    color: var(--title-text-color);
+    color: var(--primary-black-color);
 }
 .employee-specialty{
     font-weight: 400;
