@@ -4,7 +4,7 @@
 цвет заголовков #212121;
 вторичный цвет текста #757575;
 основной цвет фона #E5E5E5;
-цвет фона нашей команды #F5F4FA;
+цвет фона нашей команды и фон кнопок в портфолио #F5F4FA;
 цвет фона героя и подвала #2F303A;
 цвет акцента #2196F3
 цвет фона кнопки героя при hover #188CE8;
@@ -16,18 +16,16 @@
     --primary-black-color:#000000;
     --title-text-color:#212121;
     --accent-color:#2196F3;
-    --background-color:#E5E5E5 ;
+    --background-color:#FFFFFF ;
     --background-hero-footer-color:#2F303A;
     --background-hero-button-hover-color:#188CE8;
-    --background-team-color: #F5F4FA;
+    --background-team-secondary-button-color: #F5F4FA;
     --primary-font: "Roboto", sans-serif;
 }
 body {
     background-color: var(--background-color);
     color:var(--primary-text-color);
     font-family: var(--primary-font);
-    font-style:normal;
-    font-weight:400;
     font-size:14px;
     letter-spacing:0.03em;
 }
@@ -51,15 +49,10 @@ body {
 .logo-accent{
     color: var(--accent-color) ;
 }
-.logo:hover,
-.logo:focus
-{
-    color: var(--accent-color)
-}
+
+
 /*====/LOGO====*/
-.header{
-    background-color: var(--primary-white-color);
-}
+
 
 /*====site-nav==== */
 .site-nav {
@@ -107,7 +100,7 @@ body {
         text-transform: uppercase;
         color: var(--primary-white-color);
     }
-.button-hero{
+.button-hero {
         font-family: inherit;
         font-weight: 700;
         font-size: 16px;
@@ -115,19 +108,37 @@ body {
         letter-spacing: 0.06em;
         background: var(--accent-color);
         color:var(--primary-white-color);
+        cursor: pointer;
+
 }
-.button-hero:hover{
+.button-hero:hover,
+.button-hero:focus
+{
 background-color: var(--background-hero-button-hover-color);
 }
 /*====/hero====*/
 
 
 /*====Наши приимущества====*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 .feature-list{
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    text-transform: uppercase;
 }
 
 .description-feature {
@@ -148,9 +159,9 @@ background-color: var(--background-hero-button-hover-color);
 }
 /*Наша команда*/
 .team{
-  background-color: var(--background-team-color);  
+  background-color: var(--background-team-secondary-button-color);  
 }
-.employees-list{
+.employees{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -173,11 +184,7 @@ background-color: var(--background-hero-button-hover-color);
         line-height: 1.19;
         color:var(--primary-white-color);
 }
-.logo-accent-footer:hover,
-.logo-accent-footer:focus
- {
-    color: var(--accent-color);
-}
+
 
 
 .address{
@@ -211,7 +218,9 @@ background-color: var(--background-hero-button-hover-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
+    letter-spacing: 0.03em;
     color: var(--title-text-color);
+    background-color: var(--background-team-secondary-button-color);
     cursor: pointer;
 }
 .button-secondary:hover,
@@ -222,8 +231,6 @@ background-color: var(--background-hero-button-hover-color);
 }
 
 .work-examples-title{ 
-    font-family: inherit;
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
